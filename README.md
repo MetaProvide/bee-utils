@@ -46,6 +46,6 @@ python3 bee_utils.py send-xdai --amount 1 --from_address $FROM --to_address $TO 
 ### To fund an address with xBZZ
 
 ```
-# Send 10 xBZZ
+# Send 1 xBZZ
 python3 bee_utils.py send-xbzz --amount 1 --from_address $FROM --to_address $TO --pk $PK --rpc $GNOSIS_RPC
 ```

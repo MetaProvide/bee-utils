@@ -2,6 +2,7 @@ import click
 import json
 import os
 from web3 import Web3
+from hexbytes import HexBytes
 
 with open("./abi.json") as f:
     info_json = json.load(f)
@@ -36,7 +37,7 @@ def send_xdai(rpc, from_address, pk, to_address, amount):
     # Build transaction
     tx = {
         'nonce': nonce,
-        'to': to_address,
+        'to': HexBytes(to_address),
         'value': w3.to_wei(amount, 'ether'),
         'type': 2,
         'gas': 200000,
